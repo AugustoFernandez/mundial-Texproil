@@ -61,50 +61,109 @@ export default function Home() {
   };
 
   return (
-    <main style={{ padding: "20px" }}>
-      <h1>Mundial 2026 ⚽</h1>
+  <main
+    style={{
+      padding: "20px",
+      maxWidth: "500px",
+      margin: "0 auto",
+      fontFamily: "Arial, sans-serif",
+    }}
+  >
+    {/* LOGO */}
+    <div style={{ textAlign: "center", marginBottom: "20px" }}>
+      <img src="/logo.png" alt="Logo" style={{ height: "60px" }} />
+    </div>
 
-      {/* USUARIO */}
-      <div style={{ marginBottom: "20px" }}>
+    <h1 style={{ textAlign: "center", marginBottom: "20px" }}>
+      Mundial 2026 ⚽
+    </h1>
+
+    {/* USUARIO */}
+    <div style={{ marginBottom: "20px" }}>
+      <input
+        type="text"
+        placeholder="Tu nombre"
+        value={usuario}
+        onChange={(e) => setUsuario(e.target.value)}
+        style={{
+          padding: "10px",
+          width: "100%",
+          borderRadius: "8px",
+          border: "1px solid #ccc",
+        }}
+      />
+    </div>
+
+    {/* PARTIDOS */}
+    {partidos.map((partido) => (
+      <div
+        key={partido.id}
+        style={{
+          marginBottom: "15px",
+          padding: "15px",
+          border: "1px solid #e5e5e5",
+          borderRadius: "10px",
+          backgroundColor: "#fafafa",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        <span style={{ width: "120px" }}>{partido.equipoA}</span>
+
         <input
-          type="text"
-          placeholder="Tu nombre"
-          value={usuario}
-          onChange={(e) => setUsuario(e.target.value)}
-          style={{ padding: "8px", width: "200px" }}
+          type="number"
+          style={{
+            width: "50px",
+            padding: "5px",
+            textAlign: "center",
+            borderRadius: "6px",
+            border: "1px solid #ccc",
+          }}
+          onChange={(e) =>
+            handleChange(partido.id, "golesA", e.target.value)
+          }
         />
+
+        <span>-</span>
+
+        <input
+          type="number"
+          style={{
+            width: "50px",
+            padding: "5px",
+            textAlign: "center",
+            borderRadius: "6px",
+            border: "1px solid #ccc",
+          }}
+          onChange={(e) =>
+            handleChange(partido.id, "golesB", e.target.value)
+          }
+        />
+
+        <span style={{ width: "120px", textAlign: "right" }}>
+          {partido.equipoB}
+        </span>
       </div>
+    ))}
 
-      {/* PARTIDOS */}
-      {partidos.map((partido) => (
-        <div key={partido.id} style={{ marginBottom: "15px" }}>
-          <span>{partido.equipoA}</span>
-
-          <input
-            type="number"
-            style={{ width: "50px", margin: "0 5px" }}
-            onChange={(e) =>
-              handleChange(partido.id, "golesA", e.target.value)
-            }
-          />
-
-          <span>-</span>
-
-          <input
-            type="number"
-            style={{ width: "50px", margin: "0 5px" }}
-            onChange={(e) =>
-              handleChange(partido.id, "golesB", e.target.value)
-            }
-          />
-
-          <span>{partido.equipoB}</span>
-        </div>
-      ))}
-
-      <button onClick={guardarPredicciones}>
-        Guardar predicciones
-      </button>
-    </main>
-  );
+    {/* BOTÓN */}
+    <button
+      onClick={guardarPredicciones}
+      style={{
+        marginTop: "20px",
+        padding: "12px",
+        width: "100%",
+        backgroundColor: "#0070f3",
+        color: "white",
+        border: "none",
+        borderRadius: "8px",
+        fontSize: "16px",
+        cursor: "pointer",
+      }}
+    >
+      Guardar predicciones
+    </button>
+  </main>
+);
 }
