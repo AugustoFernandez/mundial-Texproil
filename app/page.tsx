@@ -3,11 +3,12 @@ import { useState } from "react";
 
 export default function Home() {
   const partidos = [
-    { id: 1, equipoA: "Argentina", equipoB: "Brasil" },
-    { id: 2, equipoA: "Francia", equipoB: "Alemania" },
-    { id: 3, equipoA: "España", equipoB: "Portugal" },
+    { id: 1, equipoA: "Argentina", equipoB: "Argelia" },
+    { id: 2, equipoA: "Argentina", equipoB: "Austria" },
+    { id: 3, equipoA: "Argentina", equipoB: "Jordania" },
   ];
 
+  const [usuario, setUsuario] = useState("");
   const [predicciones, setPredicciones] = useState<any>({});
 
   const handleChange = (partidoId: number, equipo: string, valor: string) => {
@@ -22,16 +23,24 @@ export default function Home() {
 
   const guardarPredicciones = async () => {
     try {
+      if (!usuario) {
+        alert("Ingresá tu nombre");
+        return;
+      }
+
       const inserts = Object.entries(predicciones)
         .filter(([_, p]: any) => p.golesA !== undefined && p.golesB !== undefined)
         .map(([partidoId, p]: any) => ({
           partido_id: Number(partidoId),
           goles_a: Number(p.golesA || 0),
           goles_b: Number(p.golesB || 0),
-          usuario: "augusto",
+          usuario: usuario,
         }));
 
-      console.log("INSERTS:", inserts);
+      if (inserts.length === 0) {
+        alert("Cargá al menos un partido");
+        return;
+      }
 
       const res = await fetch("/api/guardar", {
         method: "POST",
@@ -41,23 +50,32 @@ export default function Home() {
         body: JSON.stringify(inserts),
       });
 
-      const result = await res.json();
-      console.log("API RESPONSE:", result);
-
       if (!res.ok) throw new Error("Error backend");
 
       alert("Guardado OK 🚀");
 
     } catch (err) {
       console.error(err);
-      alert("Error real");
+      alert("Error al guardar");
     }
   };
 
   return (
     <main style={{ padding: "20px" }}>
-      <h1>Prode Mundial ⚽</h1>
+      <h1>Mundial 2026 ⚽</h1>
 
+      {/* USUARIO */}
+      <div style={{ marginBottom: "20px" }}>
+        <input
+          type="text"
+          placeholder="Tu nombre"
+          value={usuario}
+          onChange={(e) => setUsuario(e.target.value)}
+          style={{ padding: "8px", width: "200px" }}
+        />
+      </div>
+
+      {/* PARTIDOS */}
       {partidos.map((partido) => (
         <div key={partido.id} style={{ marginBottom: "15px" }}>
           <span>{partido.equipoA}</span>
