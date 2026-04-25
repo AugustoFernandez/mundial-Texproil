@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Home() {
   const partidos = [
@@ -10,36 +10,6 @@ export default function Home() {
 
   const [usuario, setUsuario] = useState("");
   const [predicciones, setPredicciones] = useState<any>({});
-  const [resultados, setResultados] = useState<any[]>([]);
-
-  // 🔥 CARGAR RESULTADOS
-  const cargarResultados = () => {
-    fetch("/api/resultados")
-      .then(res => res.json())
-      .then(data => {
-        setResultados(data.data || []);
-      });
-  };
-
-  useEffect(() => {
-    cargarResultados();
-  }, []);
-
-  // 🔥 RANKING
-  const calcularRanking = () => {
-    const ranking: any = {};
-
-    resultados.forEach((r) => {
-      if (!ranking[r.usuario]) {
-        ranking[r.usuario] = 0;
-      }
-      ranking[r.usuario] += 1;
-    });
-
-    return Object.entries(ranking)
-      .map(([usuario, puntos]) => ({ usuario, puntos }))
-      .sort((a, b) => (b as any).puntos - (a as any).puntos);
-  };
 
   const handleChange = (partidoId: number, equipo: string, valor: string) => {
     setPredicciones((prev: any) => ({
@@ -83,9 +53,6 @@ export default function Home() {
       if (!res.ok) throw new Error("Error backend");
 
       alert("Guardado OK 🚀");
-
-      // 🔥 refresca resultados
-      cargarResultados();
 
     } catch (err) {
       console.error(err);
@@ -197,56 +164,6 @@ export default function Home() {
       >
         Guardar predicciones
       </button>
-
-      {/* RESULTADOS */}
-      <h2 style={{ marginTop: "30px" }}>Resultados</h2>
-
-      <table style={{ width: "100%", marginTop: "10px" }}>
-        <thead>
-          <tr>
-            <th>Usuario</th>
-            <th>Partido</th>
-            <th>Resultado</th>
-          </tr>
-        </thead>
-        <tbody>
-          {resultados.map((r, i) => {
-            const partido = partidos.find(p => p.id === r.partido_id);
-
-            return (
-              <tr key={i}>
-                <td>{r.usuario}</td>
-                <td>
-                  {partido?.equipoA} vs {partido?.equipoB}
-                </td>
-                <td>{r.goles_a} - {r.goles_b}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-
-      {/* RANKING */}
-      <h2 style={{ marginTop: "30px" }}>🏆 Ranking</h2>
-
-      <table style={{ width: "100%", marginTop: "10px" }}>
-        <thead>
-          <tr>
-            <th>Posición</th>
-            <th>Usuario</th>
-            <th>Puntos</th>
-          </tr>
-        </thead>
-        <tbody>
-          {calcularRanking().map((r: any, i: number) => (
-            <tr key={i}>
-              <td>{i + 1}</td>
-              <td>{r.usuario}</td>
-              <td>{r.puntos}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
     </main>
   );
 }
