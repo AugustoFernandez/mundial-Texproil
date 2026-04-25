@@ -154,7 +154,7 @@ export default function Home() {
           marginTop: "20px",
           padding: "12px",
           width: "100%",
-          backgroundColor: "#0070f3",
+          backgroundColor: "#f36100",
           color: "white",
           border: "none",
           borderRadius: "8px",
@@ -162,7 +162,7 @@ export default function Home() {
           cursor: "pointer",
         }}
       >
-        Guardar predicciones
+        Guardar palpitos
       </button>
     </main>
   );
