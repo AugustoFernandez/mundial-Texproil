@@ -14,6 +14,7 @@ export default function Home() {
   const [usuario, setUsuario] = useState("");
   const [predicciones, setPredicciones] = useState<any>({});
   const router = useRouter();
+  const [legajo, setLegajo] = useState("");
 
   const handleChange = (partidoId: number, equipo: string, valor: string) => {
     setPredicciones((prev: any) => ({
@@ -27,13 +28,14 @@ export default function Home() {
 
   const guardarPredicciones = async () => {
     try {
-      if (!usuario) {
-        alert("Ingresá tu apellido y nombre");
-        return;
+      if (!usuario || !legajo) {
+        alert("Ingresá nombre y legajo");
+    return;
       }
 
       const data: any = {
         usuario: usuario,
+        legajo: legajo,
       };
 
       partidos.forEach((partido, index) => {
@@ -98,11 +100,13 @@ export default function Home() {
       <h1
         style={{
           textAlign: "center",
-          marginBottom: "5px",
+          justifyContent: "center",
+          marginBottom: "20px",
           fontSize: "34px",
           fontWeight: "bold",
           color: "#000",
           textShadow: "0px 2px 6px rgba(255,255,255,0.8)",
+          backgroundColor: "#ffffffc7",
         }}
       >
         Mundial 2026 ⚽
@@ -110,9 +114,11 @@ export default function Home() {
 
       <h2
         style={{
+          display: "inline-block",
+          justifyContent: "center",
           textAlign: "center",
-          marginBottom: "20px",
-          color: "#000",
+          marginBottom: "10px",
+          color: "#000000",
          textShadow: "0px 1px 4px rgba(255,255,255,0.8)",
         }}
       >
@@ -123,7 +129,7 @@ export default function Home() {
       <div style={{ marginBottom: "20px" }}>
         <input
           type="text"
-          placeholder="Tu apellido y nombre"
+          placeholder="Apellido y nombre"
           value={usuario}
           onChange={(e) => setUsuario(e.target.value)}
           style={{
@@ -135,6 +141,23 @@ export default function Home() {
           }}
         />
       </div>
+
+{/* n° de legajo */}
+<div style={{ marginBottom: "20px" }}>
+  <input
+    type="text"
+    placeholder="Número de legajo"
+    value={legajo}
+    onChange={(e) => setLegajo(e.target.value)}
+    style={{
+      padding: "10px",
+      width: "100%",
+      borderRadius: "8px",
+      border: "1px solid #ccc",
+      backgroundColor: "#fff",
+    }}
+  />
+</div>
 
       {/* PARTIDOS */}
       {partidos.map((partido) => (
