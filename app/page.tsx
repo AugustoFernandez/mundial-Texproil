@@ -56,8 +56,7 @@ export default function Home() {
 
       if (!res.ok) throw new Error("Error backend");
 
-      alert("Palpitos guardados 🚀");
-
+      // 🔥 REDIRECCIÓN DIRECTA
       router.push("/chequeo");
 
     } catch (err) {
@@ -68,40 +67,54 @@ export default function Home() {
 
   return (
     <main
-  style={{
-    padding: "20px",
-    maxWidth: "500px",
-    margin: "0 auto",
-    fontFamily: "Arial, sans-serif",
-
-    // 🔥 FONDO
-    backgroundImage: "url('/logo-mundial.png')",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    backgroundSize: "contain",
-    minHeight: "100vh",
-  }}
->
+      style={{
+        padding: "20px",
+        maxWidth: "500px",
+        margin: "0 auto",
+        fontFamily: "Arial, sans-serif",
+        backgroundImage: "url('/logo-mundial.png')",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundSize: "contain",
+        minHeight: "100vh",
+      }}
+    >
       {/* LOGO */}
-<div
-  style={{
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    marginBottom: "20px",
-    width: "100%",
-  }}
->
-  <img src="/logo.png" alt="Texproil" style={{ height: "60px" }} />
-</div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: "20px",
+        }}
+      >
+        <img
+          src="/logo.png"
+          alt="Texproil"
+          style={{ width: "180px", height: "auto" }}
+        />
+      </div>
 
-      <h1 style={{ textAlign: "center", marginBottom: "5px" }}>
+      {/* TITULO */}
+      <h1
+        style={{
+          textAlign: "center",
+          marginBottom: "5px",
+          fontSize: "34px",
+          fontWeight: "bold",
+        }}
+      >
         Mundial 2026 ⚽
       </h1>
 
-      <h2 style={{ textAlign: "center", marginBottom: "20px", color: "#050505" }}>
-  Fecha 1
-</h2>
+      <h2
+        style={{
+          textAlign: "center",
+          marginBottom: "20px",
+          color: "#333",
+        }}
+      >
+        Fecha 1
+      </h2>
 
       {/* USUARIO */}
       <div style={{ marginBottom: "20px" }}>
@@ -129,7 +142,7 @@ export default function Home() {
             padding: "15px",
             border: "1px solid #ff3c00",
             borderRadius: "10px",
-            backgroundColor: "rgba(255, 255, 255, 0.04)",
+            backgroundColor: "rgba(255,255,255,0.05)",
             backdropFilter: "blur(5px)",
             display: "flex",
             alignItems: "center",
@@ -196,7 +209,7 @@ export default function Home() {
         Guardar palpitos
       </button>
 
-      {/* BOTÓN VER PALPITOS */}
+      {/* BOTÓN VER */}
       <Link href="/chequeo">
         <button
           style={{
