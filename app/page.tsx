@@ -10,7 +10,8 @@ export default function Home() {
     { id: 3, equipoA: "Inglaterra", equipoB: "Croacia" },
     { id: 4, equipoA: "Brasil", equipoB: "Marruecos" },
   ];
-
+  
+  const [error, setError] = useState("");
   const [usuario, setUsuario] = useState("");
   const [predicciones, setPredicciones] = useState<any>({});
   const router = useRouter();
@@ -29,7 +30,7 @@ export default function Home() {
   const guardarPredicciones = async () => {
     try {
       if (!usuario || !legajo) {
-        alert("Ingresá nombre y legajo");
+        setError("Ingresá nombre y legajo");
     return;
       }
 
