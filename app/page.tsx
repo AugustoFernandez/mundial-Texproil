@@ -101,6 +101,8 @@ export default function Home() {
           marginBottom: "5px",
           fontSize: "34px",
           fontWeight: "bold",
+          color: "#000",
+          textShadow: "0px 2px 6px rgba(255,255,255,0.8)",
         }}
       >
         Mundial 2026 ⚽
@@ -110,7 +112,8 @@ export default function Home() {
         style={{
           textAlign: "center",
           marginBottom: "20px",
-          color: "#333",
+          color: "#000",
+         textShadow: "0px 1px 4px rgba(255,255,255,0.8)",
         }}
       >
         Fecha 1
