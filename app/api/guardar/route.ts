@@ -8,6 +8,10 @@ const supabase = createClient(
 export async function POST(req: Request) {
   try {
     const body = await req.json()
+
+    // 🔥 AGREGAR FECHA AUTOMÁTICA
+    body.fecha = new Date().toISOString()
+
     console.log("BODY:", body)
 
     const { data, error } = await supabase
