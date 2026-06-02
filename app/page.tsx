@@ -167,7 +167,7 @@ export default function Home() {
 <div style={{ marginBottom: "20px" }}>
   <input
     type="text"
-    placeholder="Número de legajo"
+    placeholder="número de documento"
     value={legajo}
     onChange={(e) => setLegajo(e.target.value)}
     style={{
