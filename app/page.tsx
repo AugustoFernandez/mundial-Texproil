@@ -4,12 +4,26 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
-  const partidos = [
-    { id: 1, equipoA: "Argentina", equipoB: "Honduras" },
-    { id: 2, equipoA: "Argentina", equipoB: "Islandiaa" },
-    { id: 3, equipoA: "-", equipoB: "-" },
-    { id: 4, equipoA: "-", equipoB: "-" },
-  ];
+ const partidos = [
+  { id: 1, equipoA: "Mexico", equipoB: "South Africa" },
+  { id: 2, equipoA: "South Korea", equipoB: "Rep. Checa" },
+  { id: 3, equipoA: "Canada", equipoB: "Bosnia" },
+  { id: 4, equipoA: "United States", equipoB: "Paraguay" },
+  { id: 5, equipoA: "Haiti", equipoB: "Scotland" },
+  { id: 6, equipoA: "Australia", equipoB: "Turquia" },
+  { id: 7, equipoA: "Brazil", equipoB: "Morocco" },
+  { id: 8, equipoA: "Qatar", equipoB: "Switzerland" },
+  { id: 9, equipoA: "Ivory Coast", equipoB: "Ecuador" },
+  { id: 10, equipoA: "Germany", equipoB: "Curacao" },
+  { id: 11, equipoA: "Netherlands", equipoB: "Japan" },
+  { id: 12, equipoA: "Suecia", equipoB: "Tunisia" },
+  { id: 13, equipoA: "Saudi Arabia", equipoB: "Uruguay" },
+  { id: 14, equipoA: "Spain", equipoB: "Cape Verde" },
+  { id: 15, equipoA: "Iran", equipoB: "New Zealand" },
+  { id: 16, equipoA: "Belgium", equipoB: "Egypt" },
+  { id: 17, equipoA: "France", equipoB: "Senegal" },
+  { id: 18, equipoA: "Irak", equipoB: "Norway" },
+];
   
   const [error, setError] = useState("");
   const [usuario, setUsuario] = useState("");
