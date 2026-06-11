@@ -5,30 +5,30 @@ import { useRouter } from "next/navigation";
 
 export default function Home() {
  const partidos = [
-  { id: 1, equipoA: "México", equipoB: "Sudáfrica" },
-  { id: 2, equipoA: "Corea del Sur", equipoB: "República Checa" },
-  { id: 3, equipoA: "Canadá", equipoB: "Bosnia" },
-  { id: 4, equipoA: "Estados Unidos", equipoB: "Paraguay" },
-  { id: 5, equipoA: "Haití", equipoB: "Escocia" },
-  { id: 6, equipoA: "Australia", equipoB: "Turquía" },
-  { id: 7, equipoA: "Brasil", equipoB: "Marruecos" },
-  { id: 8, equipoA: "Catar", equipoB: "Suiza" },
-  { id: 9, equipoA: "Costa de Marfil", equipoB: "Ecuador" },
-  { id: 10, equipoA: "Alemania", equipoB: "Curazao" },
-  { id: 11, equipoA: "Países Bajos", equipoB: "Japón" },
-  { id: 12, equipoA: "Suecia", equipoB: "Túnez" },
-  { id: 13, equipoA: "Arabia Saudita", equipoB: "Uruguay" },
-  { id: 14, equipoA: "España", equipoB: "Cabo Verde" },
-  { id: 15, equipoA: "Irán", equipoB: "Nueva Zelanda" },
-  { id: 16, equipoA: "Bélgica", equipoB: "Egipto" },
-  { id: 17, equipoA: "Francia", equipoB: "Senegal" },
-  { id: 18, equipoA: "Irak", equipoB: "Noruega" },
-  { id: 19, equipoA: "Argentina", equipoB: "Argelia" },
-  { id: 20, equipoA: "Austria", equipoB: "Jordania" },
-  { id: 21, equipoA: "Inglaterra", equipoB: "Croacia" },
-  { id: 22, equipoA: "Ghana", equipoB: "Panamá" },
-  { id: 23, equipoA: "Portugal", equipoB: "República del Congo" },
-  { id: 24, equipoA: "Uzbekistán", equipoB: "Colombia" },
+  { id: 1, equipoA: "Republica Checa", equipoB: "Sudafrica" },
+  { id: 2, equipoA: "Suiza", equipoB: "Bosnia" },
+  { id: 3, equipoA: "Canada", equipoB: "Catar" },
+  { id: 4, equipoA: "Mexico", equipoB: "Corea del Sur" },
+  { id: 5, equipoA: "Brasil", equipoB: "Haiti" },
+  { id: 6, equipoA: "Escocia", equipoB: "Marruecos" },
+  { id: 7, equipoA: "Turquia", equipoB: "Paraguay" },
+  { id: 8, equipoA: "Estados Unidos", equipoB: "Australia" },
+  { id: 9, equipoA: "Alemania", equipoB: "Costa de Marfil" },
+  { id: 10, equipoA: "Ecuador", equipoB: "Curazao" },
+  { id: 11, equipoA: "Paises Bajos", equipoB: "Suecia" },
+  { id: 12, equipoA: "Tunez", equipoB: "Japon" },
+  { id: 13, equipoA: "Uruguay", equipoB: "Cabo Verde" },
+  { id: 14, equipoA: "Espana", equipoB: "Arabia Saudita" },
+  { id: 15, equipoA: "Belgica", equipoB: "Iran" },
+  { id: 16, equipoA: "Nueva Zelanda", equipoB: "Egipto" },
+  { id: 17, equipoA: "Noruega", equipoB: "Senegal" },
+  { id: 18, equipoA: "Francia", equipoB: "Irak" },
+  { id: 19, equipoA: "Argentina", equipoB: "Austria" },
+  { id: 20, equipoA: "Jordania", equipoB: "Argelia" },
+  { id: 21, equipoA: "Inglaterra", equipoB: "Ghana" },
+  { id: 22, equipoA: "Panama", equipoB: "Croacia" },
+  { id: 23, equipoA: "Portugal", equipoB: "Uzbekistan" },
+  { id: 24, equipoA: "Colombia", equipoB: "Republica del Congo" },
 ];
   
   const [error, setError] = useState("");
@@ -143,7 +143,7 @@ export default function Home() {
          textShadow: "0px 1px 4px rgba(255,255,255,0.8)",
         }}
       >
-        Fecha 1
+        Fecha 2 
       </h2>
 
       {/* USUARIO */}
