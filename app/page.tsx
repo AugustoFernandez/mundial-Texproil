@@ -18,7 +18,7 @@ export default function Home() {
   { id: 11, equipoA: "Paises Bajos", equipoB: "Suecia" },
   { id: 12, equipoA: "Tunez", equipoB: "Japon" },
   { id: 13, equipoA: "Uruguay", equipoB: "Cabo Verde" },
-  { id: 14, equipoA: "Espana", equipoB: "Arabia Saudita" },
+  { id: 14, equipoA: "España", equipoB: "Arabia Saudita" },
   { id: 15, equipoA: "Belgica", equipoB: "Iran" },
   { id: 16, equipoA: "Nueva Zelanda", equipoB: "Egipto" },
   { id: 17, equipoA: "Noruega", equipoB: "Senegal" },
