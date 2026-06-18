@@ -143,7 +143,7 @@ export default function Home() {
          textShadow: "0px 1px 4px rgba(255,255,255,0.8)",
         }}
       >
-        Fecha 2 
+        Fecha 3 
       </h2>
 
       {/* USUARIO */}
