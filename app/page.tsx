@@ -8,6 +8,7 @@ export default function Home() {
   { id: 1, equipoA: "Sudafrica", equipoB: "Canada" },
   { id: 2, equipoA: "Brasil", equipoB: "Japon" },
   { id: 3, equipoA: "Paises Bajos", equipoB: "Marruecos" },
+  { id: 4, equipoA: "Estados Unidos", equipoB: "Bosnia" },
 ];
   
   const [error, setError] = useState("");
@@ -122,7 +123,7 @@ export default function Home() {
          textShadow: "0px 1px 4px rgba(255,255,255,0.8)",
         }}
       >
-        Eliminatoria 32
+        Eliminatoria 32 hasta el domingo 22:00
       </h2>
 
       {/* USUARIO */}
