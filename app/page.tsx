@@ -123,7 +123,7 @@ export default function Home() {
          textShadow: "0px 1px 4px rgba(255,255,255,0.8)",
         }}
       >
-        Eliminatoria 32 hasta el domingo 22:00
+        Eliminatoria 32 hasta el sabado 27/6 22:00
       </h2>
 
       {/* USUARIO */}
