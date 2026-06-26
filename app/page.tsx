@@ -5,30 +5,9 @@ import { useRouter } from "next/navigation";
 
 export default function Home() {
  const partidos = [
-  { id: 1, equipoA: "Escocia", equipoB: "Brasil" },
-  { id: 2, equipoA: "Marruecos", equipoB: "Haiti" },
-  { id: 3, equipoA: "Suiza", equipoB: "Canada" },
-  { id: 4, equipoA: "Bosnia", equipoB: "Catar" },
-  { id: 5, equipoA: "Republica Checa", equipoB: "Mexico" },
-  { id: 6, equipoA: "Sudafrica", equipoB: "Corea del Sur" },
-  { id: 7, equipoA: "Curazao", equipoB: "Costa de Marfil" },
-  { id: 8, equipoA: "Ecuador", equipoB: "Alemania" },
-  { id: 9, equipoA: "Japon", equipoB: "Suecia" },
-  { id: 10, equipoA: "Tunez", equipoB: "Paises Bajos" },
-  { id: 11, equipoA: "Turquia", equipoB: "Estados Unidos" },
-  { id: 12, equipoA: "Paraguay", equipoB: "Australia" },
-  { id: 13, equipoA: "Noruega", equipoB: "Francia" },
-  { id: 14, equipoA: "Senegal", equipoB: "Irak" },
-  { id: 15, equipoA: "Egipto", equipoB: "Iran" },
-  { id: 16, equipoA: "Nueva Zelanda", equipoB: "Belgica" },
-  { id: 17, equipoA: "Cabo Verde", equipoB: "Arabia Saudita" },
-  { id: 18, equipoA: "Uruguay", equipoB: "España" },
-  { id: 19, equipoA: "Panama", equipoB: "Inglaterra" },
-  { id: 20, equipoA: "Croacia", equipoB: "Ghana" },
-  { id: 21, equipoA: "Argelia", equipoB: "Austria" },
-  { id: 22, equipoA: "Jordania", equipoB: "Argentina" },
-  { id: 23, equipoA: "Colombia", equipoB: "Portugal" },
-  { id: 24, equipoA: "Republica del Congo", equipoB: "Uzbekistan" },
+  { id: 1, equipoA: "Sudafrica", equipoB: "Canada" },
+  { id: 2, equipoA: "Brasil", equipoB: "Japon" },
+  { id: 3, equipoA: "Paises Bajos", equipoB: "Marruecos" },
 ];
   
   const [error, setError] = useState("");
@@ -143,7 +122,7 @@ export default function Home() {
          textShadow: "0px 1px 4px rgba(255,255,255,0.8)",
         }}
       >
-        Fecha 3 
+        Eliminatoria 32
       </h2>
 
       {/* USUARIO */}
