@@ -5,18 +5,11 @@ import { useRouter } from "next/navigation";
 
 export default function Home() {
  const partidos = [
-  { id: 1, equipoA: "Alemania", equipoB: "Paraguay" },
-  { id: 2, equipoA: "Costa de Marfil", equipoB: "Noruega" },
-  { id: 3, equipoA: "Francia", equipoB: "Suecia" },
-  { id: 4, equipoA: "Mexico", equipoB: "Ecuador" },
-  { id: 5, equipoA: "Inglaterra", equipoB: "Republica del Congo" },
-  { id: 6, equipoA: "Belgica", equipoB: "Senegal" },
-  { id: 7, equipoA: "España", equipoB: "Austria" },
-  { id: 8, equipoA: "Portugal", equipoB: "Croacia" },
-  { id: 9, equipoA: "Suiza", equipoB: "Argelia" },
-  { id: 10, equipoA: "Australia", equipoB: "Egipto" },
-  { id: 11, equipoA: "Argentina", equipoB: "Cabo Verde" },
-  { id: 12, equipoA: "Colombia", equipoB: "Ghana" },
+  { id: 1, equipoA: "Marruecos", equipoB: "Canada" },
+  { id: 2, equipoA: "Francia", equipoB: "Paraguay" },
+  { id: 3, equipoA: "Brasil", equipoB: "Noruega" },
+  { id: 4, equipoA: "Mexico", equipoB: "Inglaterra" },
+  { id: 5, equipoA: "Estados Unidos", equipoB: "Belgica" },
 ];
   
   const [error, setError] = useState("");
@@ -131,7 +124,7 @@ export default function Home() {
          textShadow: "0px 1px 4px rgba(255,255,255,0.8)",
         }}
       >
-        Eliminatoria 32 hasta el lunes 29/6 12:00
+        Eliminatoria 8vos hasta el viernes 3/6 14:00
       </h2>
 
       {/* USUARIO */}
