@@ -122,7 +122,7 @@ export default function Home() {
          textShadow: "0px 1px 4px rgba(255,255,255,0.8)",
         }}
       >
-        Eliminatoria 8vos hasta el viernes 3/6 14:00
+        Eliminatoria 8vos
       </h2>
 
       {/* USUARIO */}
