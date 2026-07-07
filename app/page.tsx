@@ -5,9 +5,10 @@ import { useRouter } from "next/navigation";
 
 export default function Home() {
  const partidos = [
-  { id: 1, equipoA: "", equipoB: "" },
-  { id: 2, equipoA: "", equipoB: "" },
-  { id: 3, equipoA: "", equipoB: "" },
+  { id: 1, equipoA: "Francia", equipoB: "Marruecos" },
+  { id: 2, equipoA: "España", equipoB: "Belgica" },
+  { id: 3, equipoA: "Argentina", equipoB: "Suiza" },
+  { id: 4, equipoA: "Noruega", equipoB: "Inglaterra" },
 ];
   
   const [error, setError] = useState("");
