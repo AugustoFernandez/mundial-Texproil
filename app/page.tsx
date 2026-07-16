@@ -5,8 +5,8 @@ import { useRouter } from "next/navigation";
 
 export default function Home() {
  const partidos = [
-  { id: 1, equipoA: "Francia", equipoB: "España" },
-  { id: 2, equipoA: "Argentina", equipoB: "Inglaterra" },
+  { id: 1, equipoA: "Francia", equipoB: "Inglaterra" },
+  { id: 2, equipoA: "Argentina", equipoB: "España" },
 ];
   
   const [error, setError] = useState("");
@@ -121,7 +121,7 @@ export default function Home() {
          textShadow: "0px 1px 4px rgba(255,255,255,0.8)",
         }}
       >
-        Semifinal
+        Final y Tercer Puesto
       </h2>
 
       {/* USUARIO */}
